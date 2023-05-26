@@ -1,3 +1,4 @@
+import 'package:catalot/pages/homepage.dart';
 import 'package:flutter/material.dart';
 
 class CatalogApp extends StatefulWidget {
@@ -11,7 +12,9 @@ class _CatalogAppState extends State<CatalogApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Catalog App",
+      routes: {
+        '/': (context) => MyHomePage(),
+      },
     );
   }
 }
