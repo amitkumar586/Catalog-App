@@ -5,9 +5,17 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Catalos"),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Catalog"),
+        ),
+        body: Container(
+          child: Center(
+            child: Text("Body Part"),
+          ),
+        ),
+        drawer: Drawer(),
       ),
     );
   }
