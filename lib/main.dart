@@ -14,6 +14,8 @@ class CatalogApp extends StatefulWidget {
 }
 
 class _CatalogAppState extends State<CatalogApp> {
+  // MyRoutes myroutes = MyRoutes();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,6 +27,8 @@ class _CatalogAppState extends State<CatalogApp> {
       darkTheme: ThemeData(
           // brightness: Brightness.dark,
           ),
+      // initialRoute: RoutesName,
+      // onGenerateInitialRoutes: Routes.,
       routes: {
         // '/': (context) => MyHomePage(),
         '/': (context) => LoginPage(),
