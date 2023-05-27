@@ -2,6 +2,7 @@
 import 'package:catalog/pages/loginpage.dart';
 import 'package:catalog/utilities/routes/routes.dart';
 import 'package:catalog/utilities/routes/routes_name.dart';
+import 'package:catalog/widgets/themse.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,21 +23,12 @@ class _CatalogAppState extends State<CatalogApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.amber,
-        // fontFamily: 'regularText',
-      ),
+      theme: MyTheme.lightTheme(),
       darkTheme: ThemeData(
           // brightness: Brightness.dark,
           ),
       initialRoute: RoutesName.login,
       onGenerateRoute: Routes.generateRoute,
-      routes: {
-        // '/': (context) => MyHomePage(),
-        // RoutesName.login : LoginPage();
-
-        // '/': (context) => LoginPage(),
-      },
     );
   }
 }

@@ -11,6 +11,8 @@ class MyHomePage extends StatelessWidget {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 0,
           title: Text("Catalog"),
         ),
         body: Container(

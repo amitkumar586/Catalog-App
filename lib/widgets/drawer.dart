@@ -11,7 +11,7 @@ class MyDrawer extends StatelessWidget {
     return Drawer(
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
-              topRight: Radius.circular(10), bottomRight: Radius.circular(10))),
+              topRight: Radius.circular(5), bottomRight: Radius.circular(5))),
       width: MediaQuery.of(context).size.width / 1.8,
       child: Container(
         color: Colors.amber,
