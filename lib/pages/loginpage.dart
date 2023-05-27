@@ -1,4 +1,5 @@
-import 'package:catalot/pages/homepage.dart';
+import 'package:catalog/pages/homepage.dart';
+import 'package:catalog/utilities/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -22,12 +23,14 @@ class _LoginPageState extends State<LoginPage> {
       await Future.delayed(
         Duration(seconds: 2),
       );
-      await Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => MyHomePage(),
-        ),
-      );
+
+      await Navigator.pushNamed(context, RoutesName.home);
+      // await Navigator.push(
+      //   context,
+      //   MaterialPageRoute(
+      //     builder: (context) => MyHomePage(),
+      //   ),
+      // );
       setState(() {
         changeButton = false;
       });
@@ -52,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
                   fit: BoxFit.cover,
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * .02,
+                  height: MediaQuery.of(context).size.height * .01,
                 ),
                 Text(
                   "Welcome",
@@ -62,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                       fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * .05,
+                  height: MediaQuery.of(context).size.height * .02,
                 ),
                 Padding(
                   padding:
@@ -94,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                             }
                           }),
                       SizedBox(
-                        height: MediaQuery.of(context).size.height * .2,
+                        height: MediaQuery.of(context).size.height * .15,
                       ),
                       Material(
                         borderRadius:

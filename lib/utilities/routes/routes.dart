@@ -1,4 +1,5 @@
-import 'package:catalot/pages/loginpage.dart';
+import 'package:catalog/pages/homepage.dart';
+import 'package:catalog/pages/loginpage.dart';
 import 'package:flutter/material.dart';
 
 import 'routes_name.dart';
@@ -8,8 +9,13 @@ class Routes {
     switch (settings.name) {
       case RoutesName.login:
         return MaterialPageRoute(
-          builder: (BuildContext context) => LoginPage(),
+            builder: (BuildContext context) => LoginPage());
+
+      case RoutesName.home:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => MyHomePage(),
         );
+
       default:
         return MaterialPageRoute(builder: (_) {
           return Scaffold(

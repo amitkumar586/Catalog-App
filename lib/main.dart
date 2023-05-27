@@ -1,5 +1,7 @@
 // import 'package:catalot/pages/homepage.dart';
-import 'package:catalot/pages/loginpage.dart';
+import 'package:catalog/pages/loginpage.dart';
+import 'package:catalog/utilities/routes/routes.dart';
+import 'package:catalog/utilities/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,11 +29,13 @@ class _CatalogAppState extends State<CatalogApp> {
       darkTheme: ThemeData(
           // brightness: Brightness.dark,
           ),
-      // initialRoute: RoutesName,
-      // onGenerateInitialRoutes: Routes.,
+      initialRoute: RoutesName.login,
+      onGenerateRoute: Routes.generateRoute,
       routes: {
         // '/': (context) => MyHomePage(),
-        '/': (context) => LoginPage(),
+        // RoutesName.login : LoginPage();
+
+        // '/': (context) => LoginPage(),
       },
     );
   }
