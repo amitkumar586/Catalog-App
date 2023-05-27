@@ -1,4 +1,4 @@
-import 'package:catalot/pages/homepage.dart';
+// import 'package:catalot/pages/homepage.dart';
 import 'package:catalot/pages/loginpage.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +20,7 @@ class _CatalogAppState extends State<CatalogApp> {
       themeMode: ThemeMode.light,
       theme: ThemeData(
         primarySwatch: Colors.amber,
-        fontFamily: 'regularText',
+        // fontFamily: 'regularText',
       ),
       darkTheme: ThemeData(
           // brightness: Brightness.dark,

@@ -14,7 +14,7 @@ class _LoginPageState extends State<LoginPage> {
       child: Material(
         child: Scaffold(
           backgroundColor: Colors.white,
-          // resizeToAvoidBottomInset: false,
+          resizeToAvoidBottomInset: false,
           body: Column(
             // mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -26,10 +26,52 @@ class _LoginPageState extends State<LoginPage> {
               //   Center(
               Text(
                 "Welcome",
-                //   style: TextStyle(
-                //       fontSize: 22,
-                //       color: Colors.black,
-                //       fontFamily: 'regularText'),
+                style: TextStyle(
+                    fontSize: 24,
+                    fontFamily: 'regular',
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+                child: Column(
+                  children: [
+                    TextFormField(
+                      decoration: InputDecoration(
+                          labelText: 'User Name', hintText: 'Enter User Name'),
+                    ),
+                    TextFormField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          labelText: 'User Password',
+                          hintText: 'Enter User Password'),
+                    ),
+                    SizedBox(
+                      height: 100,
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: MediaQuery.of(context).size.height * .06,
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(color: Colors.amber),
+                        child: Text(
+                          'Login',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontFamily: 'regular',
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
