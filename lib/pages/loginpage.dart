@@ -26,7 +26,10 @@ class _LoginPageState extends State<LoginPage> {
               //   Center(
               Text(
                 "Welcome",
-                style: TextStyle(fontSize: 22, color: Colors.black),
+                //   style: TextStyle(
+                //       fontSize: 22,
+                //       color: Colors.black,
+                //       fontFamily: 'regularText'),
               ),
             ],
           ),
