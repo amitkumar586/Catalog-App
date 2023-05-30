@@ -1,4 +1,3 @@
-import 'package:catalog/pages/homepage.dart';
 import 'package:catalog/utilities/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
       });
 
       await Future.delayed(
-        Duration(seconds: 2),
+        const Duration(seconds: 2),
       );
 
       await Navigator.pushNamed(context, RoutesName.home);
@@ -57,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * .01,
                 ),
-                Text(
+                const Text(
                   "Welcome",
                   style: TextStyle(
                       fontSize: 28,
@@ -73,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     children: [
                       TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             labelText: 'User Name',
                             hintText: 'Enter User Name'),
                         validator: (value) {
@@ -86,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       TextFormField(
                           obscureText: true,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                               labelText: 'User Password',
                               hintText: 'Enter User Password'),
                           validator: (value) {
@@ -106,15 +105,15 @@ class _LoginPageState extends State<LoginPage> {
                         child: InkWell(
                           onTap: () => movetoHomeScrn(context),
                           child: AnimatedContainer(
-                            duration: Duration(seconds: 2),
+                            duration: const Duration(seconds: 2),
                             alignment: Alignment.center,
                             height: MediaQuery.of(context).size.height * .06,
                             width: changeButton
                                 ? 50
                                 : MediaQuery.of(context).size.width,
                             child: changeButton
-                                ? Icon(Icons.done)
-                                : Text(
+                                ? const Icon(Icons.done)
+                                : const Text(
                                     'Login',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(

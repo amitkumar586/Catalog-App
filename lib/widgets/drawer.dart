@@ -5,18 +5,18 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final imageUrl =
+    const imageUrl =
         "https://igimages.gumlet.io/telugu/gallery/actress/soniya/soniya221018_017.jpg?w=376&dpr=2.6";
 
     return Drawer(
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
               topRight: Radius.circular(5), bottomRight: Radius.circular(5))),
       width: MediaQuery.of(context).size.width / 1.8,
       child: Container(
         color: Colors.amber,
         child: ListView(
-          children: [
+          children: const [
             DrawerHeader(
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(

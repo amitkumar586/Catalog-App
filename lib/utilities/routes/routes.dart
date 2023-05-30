@@ -9,16 +9,16 @@ class Routes {
     switch (settings.name) {
       case RoutesName.login:
         return MaterialPageRoute(
-            builder: (BuildContext context) => LoginPage());
+            builder: (BuildContext context) => const LoginPage());
 
       case RoutesName.home:
         return MaterialPageRoute(
-          builder: (BuildContext context) => MyHomePage(),
+          builder: (BuildContext context) => const MyHomePage(),
         );
 
       default:
         return MaterialPageRoute(builder: (_) {
-          return Scaffold(
+          return const Scaffold(
             body: Center(
               child: Text("No Route define"),
             ),

@@ -1,20 +1,20 @@
 import 'dart:convert';
-
 import 'package:catalog/models/catalog.dart';
+import 'package:catalog/pages/homeWidget/catalogHeader.dart';
+import 'package:catalog/pages/homeWidget/catalogList.dart';
 import 'package:catalog/widgets/drawer.dart';
-import 'package:catalog/widgets/itemwidgeg.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-// import 'package:catalot/utilities/widgets/drawer.dart';
+import 'package:velocity_x/velocity_x.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class MyHomePageGridView extends StatefulWidget {
+  const MyHomePageGridView({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePageGridView> createState() => _MyHomePageGridViewState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageGridViewState extends State<MyHomePageGridView> {
   @override
   void initState() {
     super.initState();
@@ -49,18 +49,22 @@ class _MyHomePageState extends State<MyHomePage> {
           elevation: 0,
           title: const Text("Catalog"),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: (CatalogModel.items != null && CatalogModel.items!.isNotEmpty)
-              ? ListView.builder(
-                  itemCount: CatalogModel.items!.length,
-                  itemBuilder: (context, index) {
-                    return ItemWidget(item: CatalogModel.items![index]);
-                  },
-                )
-              : const Center(
-                  child: CircularProgressIndicator(),
-                ),
+        body: SafeArea(
+          child: Container(
+              padding: Vx.m32,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const CatalogHeader(),
+                  if (CatalogModel.items != null &&
+                      CatalogModel.items!.isNotEmpty)
+                    const CatalogList().py16().expand()
+                  else
+                    const Center(
+                      child: CircularProgressIndicator(),
+                    )
+                ],
+              )),
         ),
         drawer: const MyDrawer(),
       ),

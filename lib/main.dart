@@ -1,12 +1,10 @@
 // import 'package:catalot/pages/homepage.dart';
-import 'package:catalog/pages/loginpage.dart';
-import 'package:catalog/utilities/routes/routes.dart';
-import 'package:catalog/utilities/routes/routes_name.dart';
+import 'package:catalog/pages/homeWidget/homepageGridView.dart';
 import 'package:catalog/widgets/themse.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(CatalogApp());
+  runApp(const CatalogApp());
 }
 
 class CatalogApp extends StatefulWidget {
@@ -27,8 +25,9 @@ class _CatalogAppState extends State<CatalogApp> {
       darkTheme: ThemeData(
           // brightness: Brightness.dark,
           ),
-      initialRoute: RoutesName.login,
-      onGenerateRoute: Routes.generateRoute,
+      // initialRoute: RoutesName.login,
+      // onGenerateRoute: Routes.generateRoute,
+      home: const MyHomePageGridView(),
     );
   }
 }
